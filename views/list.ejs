@@ -9,16 +9,24 @@
     </div>
 
     <div class="box">
-      <% for (let index=0; index < newListItems.length; index++) { %>
 
-        <div class="item">
-          <input type="checkbox">
-          <p>
-            <%= newListItems[index] %>
-          </p>
 
-        </div>
-        <% } %>
+      <% newListItems.forEach(item=> { %>
+
+        <form action="/delete" method="post">
+        
+          <div class="item">
+            <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+            <p>
+              <%= item.name %>
+            </p>
+
+            <input type="hidden" name="listName" value="<%= listTitle %>">
+          </div> 
+
+        </form>
+
+        <% }); %>
 
           <form class="item" action="/" method="post">
 
@@ -31,4 +39,4 @@
 
   </body>
 
-<%- include("footer") -%>
+  <%- include("footer") -%>
