@@ -53,7 +53,7 @@ html {
     color: #00204a;
   }
   
-  form {
+  form.item {
     text-align: center;
     margin-left: 20px;
   }
