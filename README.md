@@ -69,7 +69,7 @@ To run the To-Do List App, perform the following actions:
 
 I'm a final year BCA undergraduate and a full-stack developer. Here are my skills:
 
-## 💻 Web Development:
+## Web Development:
 
 HTML,
 CSS,
@@ -86,11 +86,11 @@ MongoDB,
 Mongoose and
 React.js
 
-## 🏆 Programming Languages:
+## Programming Languages:
 
 C, C++, Java and Python
 
-## 📞 Contact Details
+## Contact Details
 Email: amankrsinha07@gmail.com
 
 LinkedIn Profile: [@AmanKumarSinha](www.linkedin.com/in/amankumarsinha)
