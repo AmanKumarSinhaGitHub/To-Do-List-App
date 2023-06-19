@@ -65,11 +65,11 @@ To run the To-Do List App, perform the following actions:
 7. Open a web browser and navigate to [localhost:3000](http://localhost:3000) to access the application. Use [localhost:3000/work](http://localhost:3000/work) and whatever you want to create new todo list.
 
 
-# 🚀 About Me
+## 🚀 About Me
 
 I'm a final year BCA undergraduate and a full-stack developer. Here are my skills:
 
-## Web Development:
+### Web Development:
 
 HTML,
 CSS,
@@ -86,11 +86,11 @@ MongoDB,
 Mongoose and
 React.js
 
-## Programming Languages:
+### Programming Languages:
 
 C, C++, Java and Python
 
-## Contact Details
+### Contact Details
 Email: amankrsinha07@gmail.com
 
 LinkedIn Profile: [@AmanKumarSinha](www.linkedin.com/in/amankumarsinha)
