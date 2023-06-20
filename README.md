@@ -93,4 +93,4 @@ C, C++, Java and Python
 ### Contact Details
 Email: amankrsinha07@gmail.com
 
-LinkedIn Profile: [@AmanKumarSinha](www.linkedin.com/in/amankumarsinha)
+LinkedIn Profile: [@AmanKumarSinha](https://www.linkedin.com/in/amankumarsinha)
