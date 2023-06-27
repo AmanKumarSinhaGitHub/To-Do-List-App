@@ -81,7 +81,7 @@ You can add new items to the list by typing in the input field and clicking the 
 
 * __About Page (http://localhost:3000/about):__ This page provides information about the To-Do List application.
 
-# Project Structure
+## Project Structure
 The project structure is as follows:
 
 * `app.js:` The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
