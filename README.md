@@ -2,7 +2,7 @@
 
 The To-Do List App is a **Node.js, Express, MongoDB, and the EJS templating engine** based application designed to help users manage their tasks efficiently.
 
-![Todo App Preview](/public/images/todo_app_preview.png)
+![Todo App Preview](/todo_app_preview.png)
 
 ## Prerequisites
 Before running this project, make sure you have the following installed:
