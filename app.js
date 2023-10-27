@@ -1,3 +1,4 @@
+const dotenv = require("dotenv")
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -11,8 +12,18 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
-// Set up default mongoose connection
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+// Set up mongoose connection local -- uncomment this if you are using it locally
+// mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+
+
+// dotenv
+dotenv.config({path:"./config.env"})
+
+// Set up mongoose connection "MongoDB Atlas" 
+
+const DB = process.env.DATABASE;
+mongoose.connect(DB)
+
 
 // Mongoose Schema for individual to-do list items
 const itemSchema = new mongoose.Schema({
