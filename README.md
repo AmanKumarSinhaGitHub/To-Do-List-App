@@ -1,28 +1,23 @@
-# [To-Do List App ⭐](https://to-do-list-rz0n.onrender.com/)
+# To-Do List App ⭐
 
-The To-Do List App is a **Node.js, Express, MongoDB, and the EJS templating engine** based application designed to help users manage their tasks efficiently.
+The To-Do List App is a Node.js, Express, MongoDB, and EJS templating engine-based application designed to help users efficiently manage their tasks.
 
+### Click Here to Open [To-Do List App](https://to-do-list-rz0n.onrender.com/)
 
-### Click Here to Open --> [To-Do List App ](https://to-do-list-rz0n.onrender.com/)
-
-Link - [https://to-do-list-rz0n.onrender.com/](https://to-do-list-rz0n.onrender.com/)
-
-<br>
-
-![todo_app_preview](https://github.com/AmanKumarSinhaGitHub/To-Do-List-App/assets/65329366/3e810143-7dbd-46d5-a21d-1bea26a731dc)
+![Todo App Preview](https://github.com/AmanKumarSinhaGitHub/To-Do-List-App/assets/65329366/3e810143-7dbd-46d5-a21d-1bea26a731dc)
 
 ## Prerequisites
-Before running this project, make sure you have the following installed:
 
-* Node.js: [Download and Install Node.js](https://nodejs.org/en/download "Node.js Download")
+Before running this project, ensure you have the following installed:
 
-* MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community "MongoDB Download")
+- Node.js: [Download and Install Node.js](https://nodejs.org/en/download)
+- MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community)
 
-## Installation 
+## Installation
 
 Follow these steps to set up the application:
 
-1. Open Powershell/Terminal and Clone the repository to your local machine:
+1. Clone the repository to your local machine:
 
    ```bash
    git clone https://github.com/AmanKumarSinhaGitHub/To-Do-List-App.git
@@ -52,7 +47,7 @@ To run the To-Do List App, perform the following actions:
 
 1. Open a new PowerShell window.
 
-2. Start the MongoDB:
+2. Start MongoDB:
 
    ```bash
    mongod
@@ -66,7 +61,7 @@ To run the To-Do List App, perform the following actions:
    mongosh
    ```
 
-5. Open another PowerShell window and Navigate to the project directory:
+5. Navigate to the project directory:
 
    ```bash
    cd To-Do-List-App
@@ -78,78 +73,106 @@ To run the To-Do List App, perform the following actions:
    nodemon .\app.js
    ```
 
-   ---
-   Note : If you are getting nodemon is not recognized error
-
-   ```bash
-   nodemon : The term 'nodemon' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-   ```
-
-   Fix it by installing nodemon.
+   **Note: If you encounter a "nodemon not recognized" error, install nodemon globally:**
 
    ```bash
    npm install -g nodemon
    ```
-   ---
-7. Open a web browser and navigate to [localhost:3000](http://localhost:3000) to access the application. Use [localhost:3000/work](http://localhost:3000/work) and whatever you want to create new todo list.
+
+7. Open a web browser and navigate to [localhost:3000](http://localhost:3000) to access the application.
+
+### Important: ⚠️
+
+**Set up backend connection locally:**
+
+- If running this project locally, uncomment the following code in `app.js`:
+
+   ```js
+   mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+   ```
+
+   And comment out the below code in ```app.js```:
+
+   ```js
+   // const DB = process.env.DATABASE;
+   // mongoose.connect(DB)
+   ```
 
 ## Usage
-* __Home Page (http://localhost:3000):__ This is the default page that shows the "Today" list. 
-You can add new items to the list by typing in the input field and clicking the "+" button.
 
-* __Custom Lists:__ You can create custom lists by adding a name in the URL (e.g., http://localhost:3000/work). You can then add items to the custom list and access it using the specified name.
+- **Home Page (http://localhost:3000):** Default page showing the "Today" list. Add new items by typing in the input field and clicking the "+" button.
 
-* __Deleting Items:__ To delete an item, click on the checkbox next to the item. It will be marked as completed and automatically removed from the list.
+- **Custom Lists:** Create custom lists by adding a name in the URL (e.g., http://localhost:3000/work). Add items and access the list using the specified name.
 
-* __About Page (http://localhost:3000/about):__ This page provides information about the To-Do List application.
+- **Deleting Items:** Click the checkbox next to an item to mark it as completed and automatically remove it from the list.
+
+- **About Page (http://localhost:3000/about):** Information about the To-Do List application.
 
 ## Project Structure
-The project structure is as follows:
 
-* `app.js:` The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
-   
-   **Models:** "_app.js_" contains the Mongoose models for the database schema.
+- `app.js:` Main entry point of the application. Configures the server, sets up routes, and connects to the database.
 
-   * `Item:` The model for individual to-do list items.
-   * `List:` The model for the custom lists.
+   **Models:**
 
-* `public:` This directory contains static files such as CSS stylesheets.
-   * `styles.css:` This file contains the CSS stylesheets for the application.
+   - `Item:` Model for individual to-do list items.
+   - `List:` Model for custom lists.
 
-* `views:` This directory contains the EJS templates used to render the HTML pages.
+- `public:` Directory containing static files such as CSS stylesheets.
+   - `styles.css:` CSS stylesheets for the application.
 
-   * `header.ejs:` The header template that is included in other EJS files.
+- `views:` Directory containing EJS templates used to render HTML pages.
 
-   * `footer.ejs:` The footer template that is included in other EJS files.
-
-   * `list.ejs:` The template for the to-do list page.
-
-   * `about.ejs:` The template for the about page.
----
+   - `header.ejs:` Header template included in other EJS files.
+   - `footer.ejs:` Footer template included in other EJS files.
+   - `list.ejs:` Template for the to-do list page.
+   - `about.ejs:` Template for the about page.
 
 ## Contributing
-Contributions are welcome! 
 
-If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
+Contributions are welcome! Please follow the steps below to contribute to the project:
 
----
-## Acknowledgements
-This project was created using Node.js, Express, MongoDB, and the EJS templating engine. 
+1. Fork the repository.
 
-Special thanks to the authors and contributors of these technologies for their valuable work. 
+2. Create a new branch for your feature or bug fix:
 
-Additionally, I would like to express my gratitude to my instructor [Angela Yu](https://twitter.com/yu_angela "Twitter") for her guidance and support throughout the development of this project.
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
----
+3. Make your changes and commit them:
+
+   ```bash
+   git add .
+   git commit -m "Add your meaningful commit message"
+   ```
+
+4. Push your changes to your forked repository:
+
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+5. Open a pull request on the original repository.
+
+### Code Style Guidelines
+
+- Follow the existing code style and structure.
+
+- Write meaningful commit messages.
+
+### Bug Reporting
+
+If you encounter any bugs or issues, please open an issue with a detailed description of the problem, steps to reproduce, and your system/environment information.
+
+## Acknowledgments
+
+This project was created using Node.js, Express, MongoDB, and the EJS templating engine. Special thanks to the authors and contributors of these technologies.
 
 ## 🚀 About Me
 
-* I'm a final year BCA undergraduate and a full-stack developer.
-
+I'm a final-year BCA undergraduate and a full-stack developer.
 
 ### Contact Details
-* Email: amankrsinha07@gmail.com
 
-* LinkedIn Profile: [@AmanKumarSinha](https://www.linkedin.com/in/amankumarsinha)
-
----
+- Email: amankrsinha07@gmail.com
+- LinkedIn Profile: [@AmanKumarSinha](https://www.linkedin.com/in/amankumarsinha)
