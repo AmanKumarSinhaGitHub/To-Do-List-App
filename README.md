@@ -181,3 +181,8 @@ I'm a final-year BCA undergraduate and a full-stack developer.
 - GitHub link - https://github.com/AmanKumarSinhaGitHub/React-To-Do-List-App
 - LIVE demo - https://amankumarsinhagithub.github.io/React-To-Do-List-App/
 - Addition feature of this app : Your to-do list is automatically saved to local storage. This means your tasks will stay even if you refresh the page or reopen the app.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
