@@ -1,4 +1,4 @@
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -15,15 +15,13 @@ app.set("view engine", "ejs");
 // Set up mongoose connection local -- uncomment this if you are using it locally
 // mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
 
-
 // dotenv
-dotenv.config({path:"./config.env"})
+dotenv.config({ path: "./config.env" });
 
-// Set up mongoose connection "MongoDB Atlas" 
+// Set up mongoose connection "MongoDB Atlas"
 
 const DB = process.env.DATABASE;
-mongoose.connect(DB)
-
+mongoose.connect(DB);
 
 // Mongoose Schema for individual to-do list items
 const itemSchema = new mongoose.Schema({
@@ -59,11 +57,9 @@ const List = mongoose.model("List", listSchema);
 
 // Default route for the home page
 app.get("/", function (req, res) {
-
   // Find all items in the collection
   Item.find({})
     .then((foundItems) => {
-
       if (foundItems.length === 0) {
         // Insert default items if the collection is empty
         Item.insertMany(defaultItems)
@@ -91,7 +87,7 @@ app.post("/", function (req, res) {
   const listName = req.body.list;
 
   // Check if itemName is not an empty string
-  if (itemName.trim() !== '') {
+  if (itemName.trim() !== "") {
     // Create a new item based on the input
     const item = new Item({
       name: itemName,
@@ -130,7 +126,6 @@ app.post("/", function (req, res) {
 
 // Route for deleting items
 app.post("/delete", function (req, res) {
-
   const listName = req.body.listName;
   const checkItemId = req.body.checkbox;
 
